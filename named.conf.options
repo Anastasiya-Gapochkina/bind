@@ -1,0 +1,11 @@
+acl "local" {
+	192.168.1.0/24;
+	127.0.0.1;
+};
+
+directory "/var/cache/bind";
+dssec-validation auto;
+allow-query { local; };
+auth-nxdomain no;
+listen-on-v6 { none; };
+version "unknown";
