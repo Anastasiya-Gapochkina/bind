@@ -1,0 +1,12 @@
+$TTL 3d
+@	IN	SOA	srv.deb.local. admin.deb.local. (
+							2018071301
+							8h
+							2h
+							2w
+							1d )
+@	IN	NS	srv.deb.local.
+@	IN	A	192.168.1.100
+srv	IN	A	192.168.1.100
+www	IN	CNAME	@
+cli	IN	A	192.168.1.112
