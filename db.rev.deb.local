@@ -1,0 +1,11 @@
+$TTL 3600
+@	IN	SOA	srv.deb.local.	admin.deb.local. (
+							2018071301
+							3600
+							900
+							3600000
+							3600 )
+
+	IN	NS	srv.deb.local.
+100	IN	PTR	deb.local.
+112	IN	PTR	cli.deb.local.
