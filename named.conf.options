@@ -1,11 +1,12 @@
+# сети, из которых разрешены запросы
 acl "local" {
 	192.168.1.0/24;
 	127.0.0.1;
 };
 
 directory "/var/cache/bind";
-dssec-validation auto;
-allow-query { local; };
-auth-nxdomain no;
-listen-on-v6 { none; };
-version "unknown";
+dnssec-validation auto; # проверка корректности ответов
+allow-query { local; }; # разрешаем запросы из списка local
+auth-nxdomain no; # для совместимости RFC1035
+listen-on-v6 { none; }; # IPv6 не используем
+version "unknown"; # не отображать версию DNS сервера при ответах
