@@ -1,8 +1,10 @@
+# описания зон
 zone "deb.local" {
-	type master;
-	file "/etc/bind/db.deb.local";
+	type master; # тип зоны - мастер сервер
+	file "/etc/bind/db.deb.local"; # файл параметров зоны
 };
+# зона обратного просмотра
 zone "1.168.192.in-addr.arpa" {
-	type master;
-	file "/etc/bind/db.rev.deb.local";
+	type master; # тип зоны - мастер сервер
+	file "/etc/bind/db.rev.deb.local"; # файл параметров зоны
 };
